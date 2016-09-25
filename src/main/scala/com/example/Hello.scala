@@ -12,5 +12,6 @@ object Hello {
       actor ! "hi"
       Thread.sleep(1000)
     }
+    system.terminate()
   }
 }
