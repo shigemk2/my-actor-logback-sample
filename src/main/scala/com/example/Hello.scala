@@ -8,7 +8,7 @@ object Hello {
     val props = Props[MyActor]
     val actor = system.actorOf(props, name = "myActor")
 
-    while (true) {
+    for(i <- 1 to 5) {
       actor ! "hi"
       Thread.sleep(1000)
     }
